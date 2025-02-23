@@ -14,7 +14,7 @@
   /* Global Styles */
   body {
     font-family: 'Minecraft', sans-serif;
-    background: url('assets/background/background1.png') no-repeat center center fixed; /* Replace with your Minecraft screenshot */
+    background: url('assets/background1.png') no-repeat center center fixed; /* Replace with your Minecraft screenshot */
     background-size: cover;
     color: #333;
   }
