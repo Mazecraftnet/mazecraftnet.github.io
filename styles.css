@@ -1,7 +1,7 @@
 /* Custom font definition (ensure Minecraft.ttf is in your project folder) */
 @font-face {
     font-family: 'Minecraft';
-    src: url('fonts/Minecraft.ttf') format('truetype');
+    src: url('assets/fonts/Minecraft.ttf') format('truetype');
   }
   
   /* Reset default styling */
