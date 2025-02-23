@@ -2,6 +2,8 @@
 @font-face {
   font-family: 'Minecraft';
   src: url('fonts/Minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Reset default styling */
@@ -31,32 +33,25 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: fade 15s infinite;
+  animation: fade 40s infinite;
 }
 
-.slide:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.slide:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.slide:nth-child(3) {
-  animation-delay: 10s;
-}
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 10s; }
+.slide:nth-child(3) { animation-delay: 20s; }
+.slide:nth-child(4) { animation-delay: 30s; }
 
 @keyframes fade {
-  0%   { opacity: 0; }
-  20%  { opacity: 1; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
+  0%, 20%   { opacity: 0; }
+  25%, 45%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 /* Global Styles */
 body {
   font-family: 'Minecraft', sans-serif;
   color: #333;
+  background: #000;
 }
 
 .container {
@@ -72,15 +67,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.247);
   z-index: 100;
 }
 
 .navbar .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: #fff;
+  color: #ff6600;
 }
 
 .nav-links {
@@ -94,7 +91,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #e69191;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -120,14 +117,23 @@ body {
 
 /* Hero Section */
 .hero {
-  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+  background: rgba(0,0,0,0.5);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
   color: #fff;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.8em;
 }
 
 .hero-content {
@@ -181,33 +187,118 @@ body {
   background: #f4f4f4;
   padding: 20px;
   border: 3px solid #333;
-  border-radius: 0;
   box-shadow: 2px 2px 0 #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* About Section Layout */
-.about-container .about-content {
+/* Image for project & modpack cards */
+.card-image {
+  width: 100%;
+  height: 150px; /* Adjust height as needed */
+  object-fit: cover;
+  border-bottom: 3px solid #333;
+  margin-bottom: 15px;
+}
+
+
+/* About Me Section */
+.about-me {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 0;
+  text-align: center;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.about-me h2 {
+  color: #800080;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-grid {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .about-text {
-  flex: 1 1 300px;
+  font-size: 1.4em;
+  line-height: 1.8;
+  max-width: 500px;
 }
 
 .about-image {
-  flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
 .skin-face {
-  width: 200px; /* Adjust as needed */
-  height: 200px; /* Maintains a 1:1 aspect ratio */
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border: 3px solid #333;
   border-radius: 5px;
 }
+
+/* Upcoming Projects 2 Section */
+.upcoming-projects2 {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 0;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.upcoming-projects2 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #800080;
+}
+
+/* Grid layout for upcoming projects 2 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Project Card Style (same as before, now with images) */
+.project {
+  background: #f4f4f4;
+  padding: 20px;
+  border: 3px solid #333;
+  box-shadow: 2px 2px 0 #000;
+  text-align: center;
+}
+
+/* Image inside project card */
+.project-image {
+  width: 100%;
+  
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Project title */
+.project h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Project description */
+.project p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+
 
 /* Socials Section */
 .social-links {
@@ -228,50 +319,29 @@ body {
   color: #800080;
 }
 
+/* Footer */
+footer {
+  background: #800080;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Adds spacing between icons */
+  gap: 15px;
   margin-top: 10px;
 }
 
 .footer-socials a {
-  color: white; /* Ensures icons are visible */
-  font-size: 1.5em; /* Increases icon size */
+  color: white;
+  font-size: 1.5em;
   transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #ff6600; /* Hover effect */
-}
-
-
-/* Contact Form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  padding: 10px;
-  border: none;
-  background: #333;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #555;
+  color: #ff6600;
 }
 
 /* Responsive Styles */
@@ -296,7 +366,7 @@ body {
   }
 
   /* Center About Section on Mobile */
-  .about-container .about-content {
+  .about-content {
     flex-direction: column;
     text-align: center;
   }

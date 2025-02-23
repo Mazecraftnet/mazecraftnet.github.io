@@ -13,10 +13,10 @@
 <body>
   <!-- Background Slideshow -->
   <div class="slideshow">
-    <div class="slide" style="background-image: url('assets/slide1.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/slide2.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/slide3.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/slide4.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/slide1.png');"></div>
+    <div class="slide" style="background-image: url('assets/slide2.png');"></div>
+    <div class="slide" style="background-image: url('assets/slide3.png');"></div>
+    <div class="slide" style="background-image: url('assets/slide4.png');"></div>
   </div>
 
   <!-- Header and Navigation -->
@@ -37,45 +37,48 @@
         <span></span>
       </div>
     </nav>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
         <h1>Step into a realm where every block tells a story.</h1>
         <p>Discover, craft, and explore your unique pixel adventure.</p>
         <a href="#about" class="btn">Discover More</a>
+        
       </div>
     </section>
   </header>
 
   <!-- Main Content -->
-  <main>
-    <!-- About Section with Minecraft Skin Image -->
-    <section id="about" class="section">
-      <div class="container about-container">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>Hi, I'm Pixel (Pixelis0P). I'm a 19-year-old student from India who has been playing Minecraft since 2015. I love the game and enjoy creating modpacks.</p>
-          </div>
-          <div class="about-image">
-            <img src="images/minecraft-skin-face.png" alt="Minecraft Skin Face" class="skin-face">
-          </div>
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Hi, I'm <strong>Pixel (Pixelis0P)</strong>. I'm a <span class="highlight">19-year-old</span> student from <span class="highlight">India</span> who has been playing Minecraft since 2015.</p>
+                    <p>I love the game and enjoy creating <strong>modpacks</strong> with unique themes and mechanics.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/face.png" alt="Minecraft Skin" class="skin-face">
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Projects Section -->
+
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
-        <!-- Upcoming Projects Only -->
-        <h3 class="subheading">Upcoming Projects</h3>
+        <h3 class="subheading">My Modpacks</h3>
         <div class="projects-grid">
           <div class="project upcoming">
+            <img src="assets/wanderlight.png" alt="Project Image" class="card-image">
             <h3>Wanderlight SMP</h3>
             <p>A survival multiplayer server with enchanting terrains, cool game mechanics, mysteries and more.</p>
           </div>
           <div class="project upcoming">
+            <img src="assets/weaponworks.png" alt="Project Image" class="card-image">
             <h3>Weaponworks</h3>
             <p>A modded multiplayer with geopolitics and war.</p>
           </div>
@@ -83,28 +86,30 @@
       </div>
     </section>
 
-    <!-- Modpacks Section (Static) -->
-    <section id="modpacks" class="section">
-      <div class="container">
-        <h2>Modpacks</h2>
-        <div class="modpacks-grid">
-          <!-- Modrinth Project -->
-          <div class="modpack">
-            <h3>Industrial Horizons</h3>
-            <p>Industrial Horizons combines mechanical innovation, advanced storage systems, and interstellar exploration for a truly limitless experience.</p>
-            <a href="https://modrinth.com/modpack/industrial-horizons" target="_blank" class="btn">View on Modrinth</a>
-          </div>
-          <!-- CurseForge Project -->
-          <div class="modpack">
-            <h3>Create: Weaponworks [Forge]</h3>
-            <p>Command, create, and conquer! Build tanks, forge weapons, and lead your army to victory in Minecraft’s ultimate war simulation—Create Weaponworks!</p>
-            <a href="https://www.curseforge.com/minecraft/modpacks/create-weaponworks-forge" target="_blank" class="btn">View on CurseForge</a>
-          </div>
+    <section class="upcoming-projects2">
+        <div class="container">
+            <h2>Upcoming Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="assets/wanderlight.png" alt="Upcoming Project 1" class="project-image">
+                    <h3>Wanderlight SMP</h3>
+                    <p>A brief description of the upcoming project, what it’s about, and why it’s exciting.</p>
+                </div>
+                <div class="project">
+                    <img src="assets/weaponworks.png" alt="Upcoming Project 2" class="project-image">
+                    <h3>Create: Weaponworks SMP</h3>
+                    <p>A modded survival smp using Create: Weaponworks modpack, simulating nations, factions, geopolitics & war.</p>
+                </div>
+                <div class="project">
+                    <img src="images/project3.jpg" alt="Upcoming Project 3" class="project-image">
+                    <h3>Coming Soon</h3>
+                    <p>Coming soon....</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
+    
 
-    <!-- Socials Section -->
     <section id="socials" class="section">
       <div class="container">
         <h2>Socials</h2>
@@ -115,36 +120,14 @@
           <a href="https://discord.gg/9RUagawaHh" target="_blank">
             <i class="fab fa-discord"></i> Discord
           </a>
-          <a href="https://youtube.com/yourchannel" target="_blank">
-            <i class="fab fa-youtube"></i> YouTube
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <form action="#" method="post" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>Made with love by Pixelis0P</p>
       <div class="footer-socials">
-        <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://discord.gg/9RUagawaHh" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="mailto:mazecraftnetwork@proton.me"><i class="fas fa-envelope"></i></a>
       </div>
       <p>&copy; 2025 Pixel from Mazecraft Networks. All rights reserved.</p>
     </div>
