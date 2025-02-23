@@ -1,7 +1,7 @@
 /* Custom font definition (ensure Minecraft.ttf is in your project folder) */
 @font-face {
     font-family: 'Minecraft';
-    src: url('assets/fonts/Minecraft.ttf') format('truetype');
+    src: url('fonts/Minecraft.ttf') format('truetype');
   }
   
   /* Reset default styling */
@@ -14,7 +14,7 @@
   /* Global Styles */
   body {
     font-family: 'Minecraft', sans-serif;
-    background: url('minecraft_screenshot.jpg') no-repeat center center fixed; /* Replace with your Minecraft screenshot */
+    background: url('assets/background/background1.png') no-repeat center center fixed; /* Replace with your Minecraft screenshot */
     background-size: cover;
     color: #333;
   }

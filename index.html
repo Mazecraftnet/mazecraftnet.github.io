@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pixel - MCN</title>
   <!-- Minecraft-inspired font -->
-  <!-- Ensure you have the file "Minecraft.ttf" in your project and adjust the path in styles.css -->
+  <!-- Make sure to place your downloaded "Minecraft.ttf" file in a fonts folder and adjust the CSS accordingly -->
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kTcXn7a6tB2dV+2wWv8r2fPqC+9vCUM1K+f+Xmk8nB4rqvSc9nD66Tzjj9mQhT6r40HHo6O2W0Hwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/kTcXn7a6tB2dV+2wWv8r2fPqC+9vCUM1K+f+Xmk8nB4rqvSc9nD66Tzjj9mQhT6r40HHo6O2W0Hwg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- Header and Navigation -->
@@ -75,12 +77,23 @@
       </div>
     </section>
 
-    <!-- Modpacks Section -->
+    <!-- Modpacks Section (Static) -->
     <section id="modpacks" class="section">
       <div class="container">
         <h2>Modpacks</h2>
-        <div id="modpacks-container" class="modpacks-grid">
-          <p>Loading modpacks...</p>
+        <div class="modpacks-grid">
+          <!-- Modrinth Project -->
+          <div class="modpack">
+            <h3>My Modrinth Modpack</h3>
+            <p>A short description of your Modrinth project.</p>
+            <a href="https://modrinth.com/your-modrinth-page" target="_blank" class="btn">View on Modrinth</a>
+          </div>
+          <!-- CurseForge Project -->
+          <div class="modpack">
+            <h3>My CurseForge Modpack</h3>
+            <p>A short description of your CurseForge project.</p>
+            <a href="https://curseforge.com/minecraft/mods/your-curseforge-page" target="_blank" class="btn">View on CurseForge</a>
+          </div>
         </div>
       </div>
     </section>
