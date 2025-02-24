@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('assets/Minecraft.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; /* Keeps it behind content */
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 1000;
+}
+
+/* Mazecraft Network Title */
+.site-title {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Section */
+.hero-overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-text {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 30px; /* Increase this value to make it bigger */
+    color: white;
+    max-width: 1000px; /* Increase width if needed */
+    line-height: 1.5;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Join Button */
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 30px;
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: #FF8C00;
+    border: 2px solid #FF4500;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #FF4500;
+    border-color: #FF8C00;
+}
+
+/* About Us Section */
+.about-section {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* About Us Title */
+.about-title {
+    color: purple;
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* About Us Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+/* About Us Image */
+.about-image {
+    width: 256px;
+    height: 256px;
+    border-radius: 10px;
+}
+
+/* About Us Text */
+.about-content p {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 18px;
+    color: white;
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Gamemodes Section (Same Style as About Us) */
+.gamemodes-section {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Gamemodes Title */
+.gamemodes-title {
+    color: purple;
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Gamemode Cards Layout */
+.gamemodes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Gamemode Card */
+.gamemode-card {
+    background: rgba(0, 0, 0, 0.075);
+    border: 100px solid rgba(255, 0, 0, 0.151)
+    border-radius: 400px;
+    padding: 90px;
+    width: 1200px;
+    text-align: center;
+}
+
+.gamemode-card:hover {
+    transform: scale(1.05);
+}
+
+/* Gamemode Image */
+.gamemode-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Gamemode Name */
+.gamemode-name {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 22px;
+    color: orange;
+    margin: 10px 0;
+}
+
+/* Gamemode Description */
+.gamemode-card p {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 16px;
+    color: white;
+    line-height: 1.4;
+}
