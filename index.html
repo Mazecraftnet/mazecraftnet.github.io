@@ -15,8 +15,8 @@
         <img src="assets/image3.png" class="slide">
     </div>
 
-    <!-- Header -->
-    <header class="site-header">
+    <!-- Header (Without Navbar) -->
+    <header class="site-header" id="navbar">
         <h1 class="site-title">Mazecraft Network</h1>
     </header>
 
@@ -30,7 +30,7 @@
     </div>
 
     <!-- About Us Section -->
-    <section class="about-section">
+    <section id="about" class="about-section">
         <h2 class="about-title">About Us</h2>
         <div class="about-content">
             <img src="assets/mcnlogo.png" alt="About Us Image" class="about-image">
@@ -43,22 +43,19 @@
     </section>
 
     <!-- Gamemodes Section -->
-    <section class="gamemodes-section">
+    <section id="gamemodes" class="gamemodes-section">
         <h2 class="gamemodes-title">Gamemodes</h2>
         <div class="gamemodes-container">
-            <!-- Gamemode 1 -->
             <div class="gamemode-card">
                 <img src="assets/image1.png" alt="Survival" class="gamemode-image">
                 <h3 class="gamemode-name">Survival</h3>
                 <p>Gather resources, build, and survive in an open-world adventure.</p>
             </div>
-            <!-- Gamemode 2 -->
             <div class="gamemode-card">
                 <img src="assets/image2.png" alt="Skyblock" class="gamemode-image">
                 <h3 class="gamemode-name">Skyblock</h3>
                 <p>Start on a floating island and expand with limited resources.</p>
             </div>
-            <!-- Gamemode 3 -->
             <div class="gamemode-card">
                 <img src="assets/image3.png" alt="Factions" class="gamemode-image">
                 <h3 class="gamemode-name">Factions</h3>
@@ -68,53 +65,46 @@
     </section>
 
     <!-- Staff Section -->
-    <section class="staff-section">
+    <section id="staff" class="staff-section">
         <h2 class="staff-title">Our Staff</h2>
         <div class="staff-container">
-            <!-- Staff Member 1 -->
             <div class="staff-card">
-                <img src="assets/staff.png" alt="Staff Member" class="staff-image">
+                <img src="assets/staff.png" alt="Owner" class="staff-image">
                 <h3 class="staff-name">Pixelis0P</h3>
-                <p class="staff-role">Administrator</p>
+                <p class="staff-role">Owner</p>
             </div>
-            <!-- Staff Member 2 -->
             <div class="staff-card">
-                <img src="assets/staff.png" alt="Staff Member" class="staff-image">
-                <h3 class="staff-name">Username2</h3>
+                <img src="assets/vacant1.png" alt="Admin" class="staff-image">
+                <h3 class="staff-name">Vacant</h3>
+                <p class="staff-role">Admin</p>
+            </div>
+            <div class="staff-card">
+                <img src="assets/vacant2.png" alt="Moderator" class="staff-image">
+                <h3 class="staff-name">Vacant</h3>
                 <p class="staff-role">Moderator</p>
-            </div>
-            <!-- Staff Member 3 -->
-            <div class="staff-card">
-                <img src="assets/staff.png" alt="Staff Member" class="staff-image">
-                <h3 class="staff-name">Username3</h3>
-                <p class="staff-role">Helper</p>
-            </div>
-            <!--Staff Member 4-->
-            <div class="staff-card">
-                <img src="assets/staff.png" alt="Staff Member" class="staff-image">
-                <h3 class="staff-name">Username3</h3>
-                <p class="staff-role">Helper</p>
             </div>
         </div>
     </section>
 
     <!-- Discord Section -->
-    <div class="discord-section">
+    <section id="discord" class="discord-section">
         <h2 class="discord-title">Join Our Discord</h2>
         <div class="discord-content">
-            <div class="discord-widget">
-                <iframe src="https://discord.com/widget?id=1332989818975551550&theme=dark"
-                    width="350" height="500" allowtransparency="true" frameborder="0"
-                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-                </iframe>
-            </div>
+            <iframe src="https://discord.com/widget?id=1332989818975551550&theme=dark" 
+                width="350" height="500" allowtransparency="true" frameborder="0">
+            </iframe>
             <div class="discord-text-container">
                 <p class="discord-text">Join our Discord community to chat with players, get updates, and participate in events!</p>
                 <a href="YOUR_DISCORD_INVITE_LINK" class="discord-button">Join Us</a>
             </div>
         </div>
-    </div>
+    </section>
     
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2025 Mazecraft Network. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
