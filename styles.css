@@ -120,7 +120,7 @@ html, body {
 .about-title {
     color: purple;
     font-family: 'MinecraftFont', sans-serif;
-    font-size: 28px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
@@ -130,7 +130,18 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 100px;
-    
+}
+
+/* About Image Container */
+.about-image-container {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5); /* Slightly transparent dark */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* About Us Image */
@@ -139,6 +150,7 @@ html, body {
     height: 256px;
     border-radius: 10px;
 }
+
 
 /* About Us Text */
 .about-content p {
@@ -215,7 +227,7 @@ html, body {
     line-height: 1.4;
 }
 
-/* Discord Section (Styled Like Other Sections) */
+/* Discord Section */
 .discord-section {
     width: 95%;
     margin: 100px auto;
@@ -241,17 +253,8 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px; /* Space between text and widget */
+    gap: 100px; /* Space between widget and text */
     flex-wrap: wrap;
-}
-
-/* Discord Text */
-.discord-text {
-    font-family: 'MinecraftFont', sans-serif;
-    font-size: 18px;
-    color: white;
-    max-width: 500px;
-    text-align: left;
 }
 
 /* Discord Widget Container */
@@ -274,3 +277,42 @@ html, body {
     height: 100%;
     border-radius: 7px;
 }
+
+/* Discord Text & Button Wrapper */
+.discord-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text and button to the left */
+    max-width: 500px;
+}
+
+/* Discord Text */
+.discord-text {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+}
+
+/* Join Us Button (Now directly below text) */
+.discord-button {
+    margin-top: 15px; /* Space between text and button */
+    padding: 12px 30px;
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: #5865F2; /* Discord Blue */
+    border: 2px solid #404EED;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.discord-button:hover {
+    background: #404EED;
+    border-color: #5865F2;
+}
+
+
