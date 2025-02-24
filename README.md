@@ -1,1 +1,1 @@
-# pixelmcn.github.io
+# mazecraftnet.github.io
