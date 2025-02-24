@@ -315,4 +315,71 @@ html, body {
     border-color: #5865F2;
 }
 
+/* Staff Section (Styled Like Gamemodes) */
+.staff-section {
+    width: 95%;
+    margin: 100px auto;
+    text-align: center;
+    background: #00000054; /* Slightly transparent */
+    padding: 30px;
+    border-radius: 7px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Staff Title */
+.staff-title {
+    color: purple;
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Staff Grid Layout */
+.staff-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Staff Card */
+.staff-card {
+    background: rgba(0, 0, 0, 0.2); /* Slightly transparent black */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 7px; /* Slightly rounded corners */
+    padding: 20px;
+    width: 150px; /* Square shape */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.staff-card:hover {
+    transform: scale(1.05);
+}
+
+/* Staff Image */
+.staff-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 7px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Staff Name */
+.staff-name {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 18px;
+    color: orange;
+    margin-bottom: 5px;
+}
+
+/* Staff Role */
+.staff-role {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 14px;
+    color: white;
+}
 
