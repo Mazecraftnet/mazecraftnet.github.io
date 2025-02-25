@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mazecraft Network</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+    <div class="loading-screen">
+        <img src="assets/logo/mcnlogo.png" alt="Loading Logo" class="loading-logo">
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
     <!-- Background Slideshow -->
     <div class="slideshow">
-        <img src="assets/image1.png" class="slide active">
-        <img src="assets/image2.png" class="slide">
-        <img src="assets/image3.png" class="slide">
+        <img src="assets/slideshow/image1.png" class="slide active">
+        <img src="assets/slideshow/image2.png" class="slide">
+        <img src="assets/slideshow/image3.png" class="slide">
     </div>
 
     <!-- Header (Without Navbar) -->
@@ -33,7 +41,7 @@
     <section id="about" class="about-section">
         <h2 class="about-title">About Us</h2>
         <div class="about-content">
-            <img src="assets/mcnlogo.png" alt="About Us Image" class="about-image">
+            <img src="assets/logo/mcnlogo.png" alt="About Us Image" class="about-image">
             <p>
                 Welcome to Mazecraft Network, the ultimate Minecraft experience! 
                 Join us in an immersive world where adventure, creativity, and 
@@ -47,17 +55,17 @@
         <h2 class="gamemodes-title">Gamemodes</h2>
         <div class="gamemodes-container">
             <div class="gamemode-card">
-                <img src="assets/image1.png" alt="Survival" class="gamemode-image">
+                <img src="assets/gamemodes/survival.png" alt="Survival" class="gamemode-image">
                 <h3 class="gamemode-name">Survival</h3>
                 <p>Gather resources, build, and survive in an open-world adventure.</p>
             </div>
             <div class="gamemode-card">
-                <img src="assets/image2.png" alt="Skyblock" class="gamemode-image">
+                <img src="assets/gamemodes/skyblock.png" alt="Skyblock" class="gamemode-image">
                 <h3 class="gamemode-name">Skyblock</h3>
                 <p>Start on a floating island and expand with limited resources.</p>
             </div>
             <div class="gamemode-card">
-                <img src="assets/image3.png" alt="Factions" class="gamemode-image">
+                <img src="assets/gamemodes/factions.png" alt="Factions" class="gamemode-image">
                 <h3 class="gamemode-name">Factions</h3>
                 <p>Team up, claim land, and battle other factions for dominance.</p>
             </div>
@@ -69,19 +77,28 @@
         <h2 class="staff-title">Our Staff</h2>
         <div class="staff-container">
             <div class="staff-card">
-                <img src="assets/staff.png" alt="Owner" class="staff-image">
+                <img src="assets/staff/staff.png" alt="Owner" class="staff-image">
                 <h3 class="staff-name">Pixelis0P</h3>
                 <p class="staff-role">Owner</p>
+                <p class="staff-discord">Discord: #0891</p>
             </div>
             <div class="staff-card">
-                <img src="assets/vacant1.png" alt="Admin" class="staff-image">
+                <img src="assets/staff/vacant1.png" alt="Admin" class="staff-image">
                 <h3 class="staff-name">Vacant</h3>
                 <p class="staff-role">Admin</p>
+                <p class="staff-discord">Discord: #0891</p>
             </div>
             <div class="staff-card">
-                <img src="assets/vacant2.png" alt="Moderator" class="staff-image">
+                <img src="assets/staff/vacant2.png" alt="Moderator" class="staff-image">
                 <h3 class="staff-name">Vacant</h3>
                 <p class="staff-role">Moderator</p>
+                <p class="staff-discord">Discord: #0891</p>
+            </div>
+            <div class="staff-card">
+                <img src="assets/staff/staff-member.png" alt="Staff Member" class="staff-image">
+                <h3 class="staff-name">Staff Name</h3>
+                <p class="staff-role">Staff Role</p>
+                <p class="staff-discord">Discord: #0891</p>
             </div>
         </div>
     </section>
@@ -91,7 +108,7 @@
         <h2 class="discord-title">Join Our Discord</h2>
         <div class="discord-content">
             <iframe src="https://discord.com/widget?id=1332989818975551550&theme=dark" 
-                width="350" height="500" allowtransparency="true" frameborder="0">
+                width="400" height="500" allowtransparency="true" frameborder="0">
             </iframe>
             <div class="discord-text-container">
                 <p class="discord-text">Join our Discord community to chat with players, get updates, and participate in events!</p>
@@ -100,11 +117,47 @@
         </div>
     </section>
     
+
+    <section class="socials-section">
+        <h2 class="socials-title">Follow Us</h2>
+        <div class="socials-container">
+            <a href="YOUR_DISCORD_LINK" class="social-icon discord">
+                <img src="assets/icons/discord.svg" alt="Discord" class="social-svg"> 
+                Discord
+            </a>
+            <a href="YOUR_YOUTUBE_LINK" class="social-icon youtube">
+                <img src="assets/icons/youtube.svg" alt="YouTube" class="social-svg"> 
+                YouTube
+            </a>
+            <a href="YOUR_TWITTER_LINK" class="social-icon twitter">
+                <img src="assets/icons/x.svg" alt="Twitter" class="social-svg"> 
+                Twitter
+            </a>
+            <a href="YOUR_BLUESKY_LINK" class="social-icon bluesky">
+                <img src="assets/icons/bluesky.svg" alt="Bluesky" class="social-svg"> 
+                Bluesky
+            </a>
+        </div>
+    </section>
+    
+
+    
+
     <!-- Footer -->
     <footer class="site-footer">
-        <p>&copy; 2025 Mazecraft Network. All Rights Reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Mazecraft Network. All Rights Reserved.</p>
+            <p>Contact: mazecraftnetwork.proton.me</p>
+            <div class="footer-socials">
+                <a href="YOUR_DISCORD_LINK" aria-label="Discord">Discord</a>
+                <a href="YOUR_YOUTUBE_LINK" aria-label="YouTube">YouTube</a>
+                <a href="YOUR_TWITTER_LINK" aria-label="Twitter">Twitter</a>
+                <a href="YOUR_BLUESKY_LINK" aria-label="Bluesky">Bluesky</a>
+            </div>
+        </div>
     </footer>
 
+    
     <script src="script.js"></script>
 </body>
 </html>
