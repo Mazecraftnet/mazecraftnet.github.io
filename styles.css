@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MinecraftFont';
-    src: url('assets/Minecraft.ttf') format('truetype');
+    src: url('assets/fonts/Minecraft.ttf') format('truetype');
 }
 
 * {
@@ -77,11 +77,15 @@ html, body {
 
 .hero-text {
     font-family: 'MinecraftFont', sans-serif;
-    font-size: 30px; /* Increase this value to make it bigger */
+    font-size: 41px;
     color: white;
-    max-width: 1000px; /* Increase width if needed */
+    max-width: 1000px;
     line-height: 1.5;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+                 0 0 20px rgba(255, 215, 0, 0.7),  /* Increased golden glow */
+                 0 0 30px rgba(255, 215, 0, 0.5),  /* Medium golden glow */
+                 0 0 40px rgba(255, 215, 0, 0.3),  /* Soft outer golden glow */
+                 0 0 70px rgba(255, 215, 0, 0.1);  /* Furthest golden glow */
 }
 
 
@@ -98,11 +102,16 @@ html, body {
     border-radius: 5px;
     text-decoration: none;
     transition: 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(255, 140, 0, 0.4); /* Orange glow matching button color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-button:hover {
     background: #FF4500;
     border-color: #FF8C00;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.9),
+                0 0 25px rgba(255, 69, 0, 0.5); /* Darker orange glow for hover state */
 }
 
 /* About Us Section */
@@ -110,7 +119,7 @@ html, body {
     width: 95%;
     margin: 100px auto;
     text-align: center;
-    background: #00000054;
+    background: #a8a8a854;
     padding: 30px;
     border-radius: 7px;
     position: relative;
@@ -120,7 +129,7 @@ html, body {
 
 /* About Us Title */
 .about-title {
-    color: purple;
+    color: rgb(140, 0, 255);
     font-family: 'MinecraftFont', sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
@@ -129,9 +138,10 @@ html, body {
 /* About Us Content */
 .about-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px;
+    width: 100%; /* Ensure full width */
 }
 
 /* About Image Container */
@@ -151,16 +161,28 @@ html, body {
     width: 256px;
     height: 256px;
     border-radius: 10px;
+    margin-right: 30px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    float: left;
 }
 
 
 /* About Us Text */
 .about-content p {
     font-family: 'MinecraftFont', sans-serif;
-    font-size: 18px;
+    font-size: 30px;
     color: white;
-    max-width: 500px;
+    max-width: 600px; /* Increase max-width for more spread text */
     text-align: left;
+    line-height: 1.6; /* Add line height for better text spacing */
+    letter-spacing: 0.5px; /* Add letter spacing */
+    flex: 1; /* Take up remaining space */
+    min-width: 0; /* Allow text to shrink if needed */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+                 0 0 20px rgba(0, 157, 255, 0.7),  /* Increased blue glow */
+                 0 0 30px rgba(0, 157, 255, 0.5),  /* Medium blue glow */
+                 0 0 40px rgba(0, 157, 255, 0.3),  /* Soft outer blue glow */
+                 0 0 70px rgba(0, 157, 255, 0.1);  /* Furthest blue glow */
 }
 
 /* Gamemodes Section (Same Style as About Us) */
@@ -168,7 +190,7 @@ html, body {
     width: 95%;
     margin: 100px auto;
     text-align: center;
-    background: #00000054; /* Slightly transparent */
+    background: #a8a8a854; /* Slightly transparent */
     padding: 30px;
     border-radius: 7px;
     position: relative;
@@ -178,7 +200,7 @@ html, body {
 
 /* Gamemodes Title */
 .gamemodes-title {
-    color: purple;
+    color: rgb(140, 0, 255);
     font-family: 'MinecraftFont', sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
@@ -234,7 +256,7 @@ html, body {
     width: 95%;
     margin: 100px auto;
     text-align: center;
-    background: #00000054; /* Semi-transparent dark */
+    background: #a8a8a854; /* Semi-transparent dark */
     padding: 30px;
     border-radius: 7px;
     position: relative;
@@ -244,7 +266,7 @@ html, body {
 
 /* Discord Title */
 .discord-title {
-    color: purple;
+    color: rgb(140, 0, 255);
     font-family: 'MinecraftFont', sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
@@ -291,9 +313,14 @@ html, body {
 /* Discord Text */
 .discord-text {
     font-family: 'MinecraftFont', sans-serif;
-    font-size: 18px;
+    font-size: 30px;
     color: white;
     text-align: left;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+                 0 0 20px rgba(88, 101, 242, 0.7),  /* Increased Discord blue glow */
+                 0 0 30px rgba(88, 101, 242, 0.5),  /* Medium Discord blue glow */
+                 0 0 40px rgba(88, 101, 242, 0.3),  /* Soft outer Discord blue glow */
+                 0 0 70px rgba(88, 101, 242, 0.1);  /* Furthest Discord blue glow */
 }
 
 /* Join Us Button (Now directly below text) */
@@ -322,7 +349,7 @@ html, body {
     width: 95%;
     margin: 100px auto;
     text-align: center;
-    background: #00000054; /* Slightly transparent */
+    background: #a8a8a854; /* Slightly transparent */
     padding: 30px;
     border-radius: 7px;
     position: relative;
@@ -332,7 +359,7 @@ html, body {
 
 /* Staff Title */
 .staff-title {
-    color: purple;
+    color: rgb(140, 0, 255);
     font-family: 'MinecraftFont', sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
@@ -352,7 +379,7 @@ html, body {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 7px; /* Slightly rounded corners */
     padding: 20px;
-    width: 150px; /* Square shape */
+    width: 200px; /* Increased to fit larger image */
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -363,8 +390,8 @@ html, body {
 
 /* Staff Image */
 .staff-image {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border-radius: 7px;
     display: block;
     margin: 0 auto 10px;
@@ -385,17 +412,138 @@ html, body {
     color: white;
 }
 
+/* Staff Discord Tag */
+.staff-discord {
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 12px;
+    color: #7289DA; /* Discord color */
+    margin-top: 5px;
+}
+
+/* Socials Section */
+.socials-section {
+    width: 95%;
+    margin: 100px auto;
+    text-align: center;
+    background: #a8a8a854; /* Semi-transparent dark */
+    padding: 30px;
+    border-radius: 7px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.socials-title {
+    color: rgb(140, 0, 255);
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Rest of the social section styles remain the same */
+.socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff; /* This will make the SVG inherit the text color */
+}
+
+/* Update the social-icon class */
+.social-icon {
+    display: flex;
+    font-family: 'MinecraftFont', sans-serif;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 24px; /* Adjust icon size */
+}
+
+.discord { background: #5865F2; }
+.youtube { background: #FF0000; }
+.twitter { background: #1DA1F2; }
+.bluesky { background: #0073FF; }
+
+.discord .social-svg { fill: #ffffff; }
+.youtube .social-svg { fill: #ffffff; }
+.twitter .social-svg { fill: #ffffff; }
+.bluesky .social-svg { fill: #ffffff; }
+
+/* Change colors on hover */
+.discord:hover .social-svg { fill: #7289DA; }
+.youtube:hover .social-svg { fill: #FF0000; }
+.twitter:hover .social-svg { fill: #1DA1F2; }
+.bluesky:hover .social-svg { fill: #0073FF; }
+
+.social-icon:hover {
+    opacity: 0.8;
+    background: #cfcfcf; /* Optional: Add a hover background color for better visual feedback */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .social-icon {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .social-icon i {
+        font-size: 20px;
+    }
+}
+
+
 /* Footer Section */
 .site-footer {
+    bottom: 0;
+    left: 0;
     width: 100%;
-    background: linear-gradient(to left, #4B0082, #0000FF, #8b94fd); /* Bluish Purple Gradient */
+    padding: 30px 0;
+    background: linear-gradient(to left, #4B0082, #0000FF, #8b94fd);
     color: white;
     text-align: center;
-    padding: 30px 0;
     font-family: 'MinecraftFont', sans-serif;
     font-size: 16px;
-    position: relative;
-    bottom: 0;
+    position: relative; /* Add this */
+    z-index: 10000; /* Add this to keep footer above slideshow */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-socials {
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: opacity 0.3s;
+}
+
+.footer-socials a:hover {
+    opacity: 0.8;
 }
 
 .scrolled {
@@ -404,3 +552,157 @@ html, body {
     transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
+/* Add these media queries at the end of your file */
+
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero-text {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+    }
+
+    .about-content p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Gamemodes Section */
+    .gamemode-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    /* Discord Section */
+    .discord-content {
+        gap: 30px;
+    }
+
+    .discord-widget {
+        width: 100%;
+        height: 400px;
+    }
+
+    .discord-text-container {
+        width: 90%;
+    }
+
+    /* Staff Section */
+    .staff-card {
+        width: 180px;
+    }
+    
+    .staff-image {
+        width: 96px;
+        height: 96px;
+    }
+
+    /* Socials Section */
+    .social-icon {
+        width: 90%;
+        justify-content: center;
+    }
+
+    /* Section Titles */
+    .about-title,
+    .gamemodes-title,
+    .discord-title,
+    .staff-title,
+    .socials-title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header */
+    .site-title {
+        font-size: 20px;
+    }
+
+    /* Hero Section */
+    .hero-text {
+        font-size: 20px;
+    }
+
+    .hero-button {
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+
+    /* Section Titles */
+    .about-title,
+    .gamemodes-title,
+    .discord-title,
+    .staff-title,
+    .socials-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.loading-logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #4B0082, #0000FF, #8b94fd);
+    border-radius: 5px;
+    animation: progress 2s ease-in-out forwards;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Add this class to hide the loading screen */
+.loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
