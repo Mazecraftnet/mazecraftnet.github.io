@@ -1,21 +1,60 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let slides = document.querySelectorAll(".slide");
-    let index = 0;
+async function updateServerStatus() {
+    try {
+        // Replace with your actual Minecraft server API endpoint
+        const response = await fetch('https://api.mcsrvstat.us/2/mc.hypixel.net');
+        const data = await response.json();
 
-    function changeSlide() {
-        slides.forEach(slide => slide.classList.remove("active"));
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
+        const playerCount = document.getElementById('playerCount');
+        const serverStatus = document.getElementById('serverStatus');
+
+        if (data.online) {
+            playerCount.textContent = data.players ? data.players.online : '0';
+            serverStatus.textContent = 'Online';
+            serverStatus.style.color = '#00ff00';
+        } else {
+            playerCount.textContent = '0';
+            serverStatus.textContent = 'Offline';
+            serverStatus.style.color = '#ff0000';
+        }
+    } catch (error) {
+        console.error('Error fetching server status:', error);
+        document.getElementById('serverStatus').textContent = 'Error';
+        document.getElementById('serverStatus').style.color = '#ff0000';
     }
+}
 
-    setInterval(changeSlide, 10000); // Change every 5 seconds instead of 3
-});
+// Update status every 30 seconds
+updateServerStatus();
+setInterval(updateServerStatus, 30000);
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Hide loading screen after content is loaded
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.querySelector('.loading-screen').classList.add('hidden');
-        }, 2000); // Wait for 2 seconds before hiding
-    });
-});
+console.log('Page loaded successfully!');
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slides");
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+// Auto advance slides every 5 seconds
+setInterval(() => {
+    showSlides(slideIndex += 1);
+}, 5000);

@@ -3,159 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mazecraft Network</title>
+    <title>Home - Mazecraft Network</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Background Slideshow -->
-    <div class="slideshow">
-        <img src="assets/slideshow/image1.png" class="slide active">
-        <img src="assets/slideshow/image2.png" class="slide">
-        <img src="assets/slideshow/image3.png" class="slide">
-    </div>
-
-    <!-- Header (Without Navbar) -->
-    <header class="site-header" id="navbar">
-        <h1 class="site-title">Mazecraft Network</h1>
-        <div class="nav-buttons">
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Mazecraft Logo" class="logo-image">
+        </div>
+        <nav class="nav-menu">
             <a href="/store" class="nav-button">Store</a>
             <a href="/docs" class="nav-button">Docs</a>
+            <div class="dropdown">
+                <button class="nav-button dropdown-toggle">Map</button>
+                <div class="dropdown-content">
+                    <a href="/dynmap">DynMap</a>
+                    <a href="/bluemap">BlueMap</a>
+                </div>
+            </div>
             <a href="/downloads" class="nav-button">Downloads</a>
-        </div>
+        </nav>
     </header>
-
-    <!-- Hero Section -->
-    <div class="hero-overlay">
-        <div class="hero-text">
-            <p>Step into a realm where every block tells a story.</p>
-            <p>Discover, craft, and explore your unique pixel adventure.</p>
-            <a href="#" class="hero-button">Join Now</a>
-        </div>
+    <div class="hero-container">
+        <h1 class="hero-text">Welcome to Mazecraft Network</h1>
+        <p class="hero-subtitle">Your Ultimate Minecraft Adventure Awaits</p>
+        <button class="join-button" onclick="copyServerIP()">Join Now</button>
     </div>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <h2 class="about-title">About Us</h2>
-        <div class="about-content">
-            <img src="assets/logo/mcnlogo.png" alt="About Us Image" class="about-image">
-            <p>
-                Welcome to Mazecraft Network, the ultimate Minecraft experience! 
-                Join us in an immersive world where adventure, creativity, and 
-                community come together. Start your journey today!
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-text">
+                Welcome to Mazecraft Network, where creativity meets adventure! Our server 
+                offers unique gameplay experiences, friendly community, and endless 
+                possibilities for Minecraft enthusiasts.
             </p>
         </div>
     </section>
 
-    <!-- Gamemodes Section -->
-    <section id="gamemodes" class="gamemodes-section">
-        <h2 class="gamemodes-title">Gamemodes</h2>
-        <div class="gamemodes-container">
-            <div class="gamemode-card">
-                <img src="assets/gamemodes/survival.png" alt="Survival" class="gamemode-image">
-                <h3 class="gamemode-name">Survival</h3>
-                <p>Gather resources, build, and survive in an open-world adventure.</p>
-            </div>
-            <div class="gamemode-card">
-                <img src="assets/gamemodes/skyblock.png" alt="Skyblock" class="gamemode-image">
-                <h3 class="gamemode-name">Skyblock</h3>
-                <p>Start on a floating island and expand with limited resources.</p>
-            </div>
-            <div class="gamemode-card">
-                <img src="assets/gamemodes/factions.png" alt="Factions" class="gamemode-image">
-                <h3 class="gamemode-name">Factions</h3>
-                <p>Team up, claim land, and battle other factions for dominance.</p>
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <!-- First Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 1">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Founder</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Second Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 2">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Administrator</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Third Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 3">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Moderator</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Fourth Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 4">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Helper</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Fifth Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 5">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Helper</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Sixth Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 6">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Helper</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Seventh Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 7">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Helper</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
+
+                <!-- Eighth Team Member -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team.png" alt="Team Member 8">
+                    </div>
+                    <h3 class="member-name">Pixelis0P</h3>
+                    <p class="member-role">Helper</p>
+                    <p class="discord-id">Discord: #Pixel9421</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team-section">
-        <h2 class="team-title">Our Team</h2>
-        <div class="team-container">
-            <div class="team-card">
-                <img src="assets/staff/staff.png" alt="Owner" class="team-image">
-                <h3 class="team-name">Pixelis0P</h3>
-                <p class="team-role">Owner</p>
-                <p class="team-discord">Discord: #0891</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/staff/vacant1.png" alt="Admin" class="team-image">
-                <h3 class="team-name">Vacant</h3>
-                <p class="team-role">Admin</p>
-                <p class="team-discord">Discord: #0891</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/staff/vacant2.png" alt="Moderator" class="team-image">
-                <h3 class="team-name">Vacant</h3>
-                <p class="team-role">Moderator</p>
-                <p class="team-discord">Discord: #0891</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/staff/staff-member.png" alt="Team Member" class="team-image">
-                <h3 class="team-name">Team Name</h3>
-                <p class="team-role">Team Role</p>
-                <p class="team-discord">Discord: #0891</p>
+    <section class="gamemodes-header">
+        <div class="container">
+            <h2 class="section-title">Our Gamemodes</h2>
+            <p class="section-text">
+                Discover unique worlds and adventures across our diverse game modes.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="realms-section">
+        <div class="container">
+            <div class="realms-content">
+                <div class="realms-image">
+                    <img src="images/wanderlight.png" alt="Wanderlight SMP" class="realm-logo glow-effect">
+                </div>
+                <div class="realms-text">
+                    <h2 class="section-title">Wanderlight SMP</h2>
+                    <p class="section-text">
+                        Embark on an epic adventure through a world where ancient secrets, mythical creatures, and untamed landscapes come to life. Wanderlight Realms blends immersive exploration, challenging battles, and vibrant biomes to create a captivating fantasy experience.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Discord Section -->
-    <section id="discord" class="discord-section">
-        <h2 class="discord-title">Join Our Discord</h2>
+    <section class="realms-section weaponworks">
+        <div class="container">
+            <div class="realms-content reverse">
+                <div class="realms-text">
+                    <h2 class="section-title">Unlimited Weaponworks</h2>
+                    <p class="section-text">
+                        Command, create, and conquer with Create Weaponworks! This Create-powered modpack invites you to unleash your engineering prowess in a world where warfare meets intricate contraptions. Build tanks, deploy powerful cannons, craft advanced technologies, and lead your forces to victory in Minecraft’s most innovative war simulation.
+                    </p>
+                </div>
+                <div class="realms-image">
+                    <img src="images/weaponworks.png" alt="Weaponworks" class="realm-logo glow-effect">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="realms-section">
+        <div class="container">
+            <div class="realms-content">
+                <div class="realms-image">
+                    <img src="images/industrial.png" alt="Industrial Horizons" class="realm-logo glow-effect">
+                </div>
+                <div class="realms-text">
+                    <h2 class="section-title">Industrial Horizons</h2>
+                    <p class="section-text">
+                        Unleash your creativity and dominate automation with Industrial Horizons! This Create-powered modpack lets you dive into a world where engineering meets imagination. From automating everything to mining everything, and even embarking on an interplanetary journey, the possibilities are endless.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="realms-section tournaments">
+        <div class="container">
+            <div class="realms-content reverse">
+                <div class="realms-text">
+                    <h2 class="section-title">Tournaments</h2>
+                    <p class="section-text">
+                        Coming Soon!
+                    </p>
+                    <div class="slideshow-container">
+                        <div class="slides fade">
+                            <img src="images/slide1.png" alt="Tournament 1">
+                        </div>
+                        <div class="slides fade">
+                            <img src="images/slide2.png" alt="Tournament 2">
+                        </div>
+                        <div class="slides fade">
+                            <img src="images/slide3.png" alt="Tournament 3">
+                        </div>
+                        <div class="slides fade">
+                            <img src="images/slide4.png" alt="Tournament 4">
+                        </div>
+                        <div class="slides fade">
+                            <img src="images/slide5.png" alt="Tournament 5">
+                        </div>
+                        <div class="slides fade">
+                            <img src="images/slide6.png" alt="Tournament 6">
+                        </div>
+                        <div class="slides fade">
+                            <img src="images/slide7.png" alt="Tournament 7">
+                        </div>
+                    </div>
+                    <div class="dots-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discord-section">
+    <div class="container">
+        <h2 class="section-title">Join Our Community</h2>
         <div class="discord-content">
-            <iframe src="https://discord.com/widget?id=1332989818975551550&theme=dark" 
-                width="400" height="500" allowtransparency="true" frameborder="0">
-            </iframe>
-            <div class="discord-text-container">
-                <p class="discord-text">Join our Discord community to chat with players, get updates, and participate in events!</p>
-                <a href="YOUR_DISCORD_INVITE_LINK" class="discord-button">Join Us</a>
+            <div class="discord-text">
+                <p class="section-text">
+                    Join our vibrant Discord community! Connect with fellow players, 
+                    participate in events, get server updates, and become part of our 
+                    growing family. Our community is built on respect, creativity, and 
+                    the love for Minecraft.
+                </p>
+                <a href="https://discord.gg/your-invite" class="discord-join-button">
+                    Join Us
+                </a>
+            </div>
+            <div class="discord-widget">
+                <iframe 
+                    src="https://discord.com/widget?id=1332989818975551550&theme=dark" 
+                    width="350" 
+                    height="500" 
+                    allowtransparency="true" 
+                    frameborder="0" 
+                    style="background-color: transparent;"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                </iframe>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
 
     <section class="socials-section">
-        <h2 class="socials-title">Follow Us</h2>
-        <div class="socials-container">
-            <a href="YOUR_DISCORD_LINK" class="social-icon discord">
-                <img src="assets/icons/discord.svg" alt="Discord" class="social-svg"> 
-                Discord
-            </a>
-            <a href="YOUR_YOUTUBE_LINK" class="social-icon youtube">
-                <img src="assets/icons/youtube.svg" alt="YouTube" class="social-svg"> 
+    <div class="container">
+        <h2 class="section-title">Our Socials</h2>
+        <p class="section-text">Make sure to follow us on our socials</p>
+        <div class="social-buttons">
+            <a href="https://youtube.com/@MazecraftNetwork" class="social-button youtube">
+                <img src="images/socials/youtube.svg" alt="YouTube">
                 YouTube
             </a>
-            <a href="YOUR_TWITTER_LINK" class="social-icon twitter">
-                <img src="assets/icons/x.svg" alt="Twitter" class="social-svg"> 
+            <a href="https://discord.gg/your-invite" class="social-button discord">
+                <img src="images/socials/discord.svg" alt="Discord">
+                Discord
+            </a>
+            <a href="https://twitter.com/MazecraftNet" class="social-button twitter">
+                <img src="images/socials/x.svg" alt="Twitter">
                 Twitter
             </a>
-            <a href="YOUR_BLUESKY_LINK" class="social-icon bluesky">
-                <img src="assets/icons/bluesky.svg" alt="Bluesky" class="social-svg"> 
+            <a href="https://bsky.app/profile/mazecraft.bsky.social" class="social-button bluesky">
+                <img src="images/socials/bluesky.svg" alt="Bluesky">
                 Bluesky
             </a>
         </div>
-    </section>
-    
+    </div>
+</section>
 
-    
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Mazecraft Network. All Rights Reserved.</p>
-            <p>Contact: mazecraftnetwork.proton.me</p>
-            <div class="footer-socials">
-                <a href="YOUR_DISCORD_LINK" aria-label="Discord">Discord</a>
-                <a href="YOUR_YOUTUBE_LINK" aria-label="YouTube">YouTube</a>
-                <a href="YOUR_TWITTER_LINK" aria-label="Twitter">Twitter</a>
-                <a href="YOUR_BLUESKY_LINK" aria-label="Bluesky">Bluesky</a>
-            </div>
-        </div>
+    <footer class="footer">
+        <p class="footer-text">Made with ❤️ by Pixel & The Mazecraft S & N Team</p>
+        <p class="footer-copyright">© 2025 Mazecraft Network & Mazecraft Studios. All Rights Reserved.</p>
     </footer>
-
-    
+    <script>
+        function copyServerIP() {
+            const serverIP = "mc.mazecraft.fun"; // Replace with your actual server IP
+            navigator.clipboard.writeText(serverIP).then(() => {
+                alert("Server IP copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
