@@ -3,10 +3,16 @@
     src: url('fonts/Minecraft.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Monocraft';
+    src: url('fonts/Monocraft.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 body {
@@ -61,6 +67,7 @@ h1 {
 .join-button {
     padding: 0.75rem 2rem;  /* Reduced from 1rem to 0.75rem */
     font-size: 1.3rem;
+    
     background: linear-gradient(to bottom, #ff8c00, #ff4500);
     border: none;
     border-radius: 8px;
@@ -96,7 +103,7 @@ h1 {
     text-align: center;
     position: relative;
     bottom: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Monocraft', sans-serif;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -147,21 +154,21 @@ h1 {
 }
 
 .nav-button {
-    height: 36px;  /* Reduced from 40px */
-    padding: 0 1.2rem;  /* Reduced horizontal padding */
-    background: rgba(88, 101, 242, 0.15);  /* Reduced opacity */
-    border: 1px solid rgba(88, 101, 242, 0.3);  /* Thinner border, reduced opacity */
-    border-radius: 4px;  /* Reduced border radius */
-    color: rgba(255, 255, 255, 0.9);  /* Slightly reduced text opacity */
+    height: 36px;
+    padding: 0 1.2rem;
+    background: rgba(88, 101, 242, 0.15);
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    font-family: 'Minecraft', Arial, sans-serif;
-    font-size: 0.95rem;  /* Slightly smaller font */
-    letter-spacing: 0.5px;  /* Added letter spacing */
-    transition: all 0.2s ease;  /* Faster transition */
+    font-family: 'Monocraft', monospace; /* Changed from Minecraft to Monocraft */
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
-    justify-content: center;  /* Center text horizontally */
-    text-align: center;  /* Center text within the button */
+    justify-content: center;
+    text-align: center;
     backdrop-filter: blur(8px);
 }
 
@@ -173,9 +180,81 @@ h1 {
     border-color: rgba(88, 101, 242, 0.5);
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none; /* Hide on mobile - add hamburger menu later if needed */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border: none;
+        border-bottom: 1px solid rgba(88, 101, 242, 0.3);
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-button {
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        margin-top: 5px;
     }
 }
 
@@ -302,6 +381,18 @@ h1 {
         flex-direction: column;
         text-align: center;
     }
+
+    .realms-content.reverse {
+        flex-direction: column;
+    }
+
+    .realms-image {
+        margin: 20px 0;
+    }
+
+    .realm-logo {
+        max-width: 200px;
+    }
 }
 
 .gamemodes-header {
@@ -366,6 +457,21 @@ h1 {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        width: 100%;
+    }
+
+    .slides img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dots-container {
+        margin-top: 10px;
+    }
 }
 
 .discord-section {
@@ -438,6 +544,20 @@ h1 {
     .discord-widget {
         margin-top: 2rem;
     }
+
+    .discord-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discord-widget {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    iframe {
+        width: 100%;
+    }
 }
 
 .socials-section {
@@ -506,6 +626,16 @@ h1 {
     .social-button {
         width: 200px;
         justify-content: center;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-button {
+        width: 80%;
+        margin: 10px 0;
     }
 }
 
@@ -600,4 +730,41 @@ h1 {
 
 .dropdown:hover .dropdown-toggle {
     background: rgba(88, 101, 242, 0.4);
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .team-member {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer-text, .footer-copyright {
+        font-size: 0.9rem;
+    }
 }

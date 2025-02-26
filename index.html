@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Home - Mazecraft Network</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="images/logo.png" alt="Mazecraft Logo" class="logo-image">
+            <img src="images/logo.svg" alt="Mazecraft Logo" class="logo-image">
         </div>
         <nav class="nav-menu">
             <a href="/store" class="nav-button">Store</a>
@@ -26,6 +26,11 @@
             </div>
             <a href="/downloads" class="nav-button">Downloads</a>
         </nav>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
     <div class="hero-container">
         <h1 class="hero-text">Welcome to Mazecraft Network</h1>
@@ -290,7 +295,7 @@
 </section>
 
     <footer class="footer">
-        <p class="footer-text">Made with ❤️ by Pixel & The Mazecraft S & N Team</p>
+        <p class="footer-text">Made with hate by Pixel:)</p>
         <p class="footer-copyright">© 2025 Mazecraft Network & Mazecraft Studios. All Rights Reserved.</p>
     </footer>
     <script>
@@ -301,6 +306,11 @@
             }).catch(err => {
                 console.error('Failed to copy:', err);
             });
+        }
+
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
         }
     </script>
     <script src="script.js"></script>

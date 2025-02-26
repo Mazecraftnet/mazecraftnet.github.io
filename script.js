@@ -27,6 +27,11 @@ async function updateServerStatus() {
 updateServerStatus();
 setInterval(updateServerStatus, 30000);
 
+function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
 console.log('Page loaded successfully!');
 
 let slideIndex = 1;
